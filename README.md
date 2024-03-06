@@ -1,0 +1,1 @@
+# whiskers-launcher-snippets-extension

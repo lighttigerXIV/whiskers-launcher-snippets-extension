@@ -1,0 +1,10 @@
+{
+  "id": "lighttigerxiv/snippets",
+  "name": "Snippets",
+  "version_name": "1.0.0",
+  "version_code": 1,
+  "description": "A extension to copy code snippets. It supports parameters for more functionality",
+  "os": ["*"],
+  "keyword": "sp",
+  "settings": []
+}

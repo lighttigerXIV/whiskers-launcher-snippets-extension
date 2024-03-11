@@ -45,6 +45,7 @@ pub fn get_snippets_dir() -> PathBuf {
 pub fn get_snippets_path() -> PathBuf {
     let mut path = get_snippets_dir();
     path.push("snippets.json");
+    println!("{:?}", &path);
     path
 }
 

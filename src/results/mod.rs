@@ -30,6 +30,8 @@ pub fn handle_results(context: Context) {
         if kwd == "d" || kwd == "delete" {
             show_delete_results(search.to_owned());
         }
+
+        show_snippets_results(search.to_owned());
     }
 
     if search.keyword.is_none() && !search.search_text.trim().is_empty() {

@@ -198,7 +198,7 @@ fn show_edit_results(search: Search) {
 
             let snippet_field = DialogField::TextArea(
                 dialog::TextArea::new("snippet", "Snippet", &snippet.snippet)
-                    .description("The snippet. If needed use {%0}, {%1} and so on as paremeter")
+                    .description("The snippet. If needed use {%0}, {%1} and so on as paremeter or {%s} to use the whole search text")
                     .placeholder("Snippet"),
             );
 

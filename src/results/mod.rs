@@ -74,7 +74,7 @@ fn show_default_results() {
 
     let snippet_field = DialogField::TextArea(
         dialog::TextArea::new("snippet", "Snippet", "")
-            .description("The snippet. If needed use {%0}, {%1} and so on as paremeter")
+            .description("The snippet. If needed use {%0}, {%1} and so on as paremeter or {%s} to use the whole search text")
             .placeholder("Snippet"),
     );
 
@@ -115,6 +115,10 @@ fn show_snippets_results(search: Search) {
                 for (index, word) in search_split.enumerate() {
                     let pattern = format!("{{%{}}}", index);
                     replaced_snippet = replaced_snippet.replace(&pattern, word);
+                }
+
+                if replaced_snippet.contains("{%s}") {
+                    replaced_snippet = replaced_snippet.replace("{%s}", &search.search_text);
                 }
 
                 results.push(WhiskersResult::TitleAndText(
